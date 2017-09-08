@@ -1,6 +1,13 @@
 var http = require('http');
 // fs module allows us to read and write content for responses!!
 var fs = require('fs');
+
+var my_module= require('./my_module')();
+my_module.add(5,5);
+my_module.multiply(5,5);
+my_module.square(7);
+my_module.random(1,7);
+
 // creating a server using http module:
 var server = http.createServer(function (request, response){
     // see what URL the clients are requesting:
